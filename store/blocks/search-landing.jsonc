@@ -1,0 +1,42 @@
+{
+    "store.custom#landing": { 
+        "blocks": [
+          "image#landingbanner",
+          "search-result-layout.customQuery#landing"
+        ]
+    },
+
+    "image#landingbanner": {
+        "props": {
+            "src": "https://img.ibxk.com.br/materias/1487/408.jpg?w=1120&h=420&mode=crop&scale=both",
+            "minWidth": "100%",
+            "maxHeight": 200
+        }
+    },
+
+    "search-result-layout.customQuery#landing": {
+        "blocks":[
+            "search-result-layout.desktop#landing"
+        ],
+        "props": {
+            "querySchema": {
+              "skusFilter": "FIRST_AVAILABLE",
+              "orderByField": "OrderByReleaseDateDESC",
+              "hideUnavailableItems": true,
+              "maxItemsPerPage": 8,
+              "facetsBehavior": "Blue Top Retro Camera"
+            }
+        }
+    },
+
+    "search-result-layout.desktop#landing": {
+        "children": [
+             "breadcrumb.search",
+             "search-title.v2",
+             "flex-layout.row#top",
+             "search-fetch-previous",
+             "flex-layout.row#results",
+             "search-fetch-more"
+        ]
+    }
+}
